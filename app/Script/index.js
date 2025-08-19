@@ -7,7 +7,7 @@ const mainHeader = document.querySelector('.main-header');
         
         openSearchBtn.addEventListener('click', () => {
             mainHeader.classList.add('search-active');
-            headerSearchInput.focus(); // Immediately focus the input field for good UX
+            headerSearchInput.focus();
         });
 
         closeSearchBtn.addEventListener('click', () => {
@@ -17,9 +17,13 @@ const mainHeader = document.querySelector('.main-header');
 
 function toggleHelper(){
   const helperContainer = document.querySelector('.help-function');
+  const infoBoxCloseBtn = document.getElementById('infoBoxCloseBtn');
   const helpIcon = document.getElementById('helpIcon');
   helpIcon.addEventListener('click', () => {
     helperContainer.classList.contains('active') ? helperContainer.classList.remove('active') : helperContainer.classList.add('active');
+  });
+  infoBoxCloseBtn.addEventListener('click', () => {
+    helperContainer.classList.remove('active');
   });
 }
 toggleHelper();
@@ -46,10 +50,7 @@ ScrollController("scrollContainerImage", "prevBtnImage", "nextBtnImage", 316);
 ScrollController("scrollContainerVideo", "prevBtnVideo", "nextBtnVideo", 412);
 ScrollController("scrollContainerVideo1", "prevBtnVideo1", "nextBtnVideo1", 412);
 
-const searchFunction=document.getElementById("searchIcon");
-searchFunction.addEventListener("click", async () => {
-    
-});
+
 
 
 

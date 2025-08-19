@@ -348,20 +348,17 @@ nav a.active {
 .footer-content{
     margin-bottom:0px;
 }
-/* 
-  The only changes are in the first two rules below.
-  The rest of your CSS remains the same.
-*/
+
+
+
+
 
 .help-function {
-    /* HIDDEN STATE */
     opacity: 0;
     visibility: hidden;
-    pointer-events: none; /* Prevents interaction when hidden */
-    transform: scale(0.95) translateY(10px); /* Start slightly smaller and lower */
+    pointer-events: none;
+    transform: scale(0.95) translateY(10px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out, visibility 150ms;
-
-    /* Your original positioning and base styles */
     border: 1px solid #dadce0;
     max-height: 600px;
     height: 650px;
@@ -372,7 +369,7 @@ nav a.active {
     right: 28px;
     position: absolute;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    display: flex; /* Keep display:flex, it defines the layout */
+    display: flex; 
     flex-direction: column;
     overflow: hidden;
     color: #3c4043;
@@ -380,15 +377,12 @@ nav a.active {
 }
 
 .help-function.active {
-    /* VISIBLE STATE */
     opacity: 1;
     visibility: visible;
     pointer-events: auto; 
-    z-index: 1000; /* Re-enable interaction */
-    transform: scale(1) translateY(0); /* Animate to full size and original position */
+    z-index: 1000;
+    transform: scale(1) translateY(0);
 }
-
-/* --- NO CHANGES NEEDED BELOW THIS LINE --- */
 
 #helpIcon{
     background: none;
