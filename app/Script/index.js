@@ -15,7 +15,14 @@ const mainHeader = document.querySelector('.main-header');
         });
     }
 
-
+function toggleHelper(){
+  const helperContainer = document.querySelector('.help-function');
+  const helpIcon = document.getElementById('helpIcon');
+  helpIcon.addEventListener('click', () => {
+    helperContainer.classList.contains('active') ? helperContainer.classList.remove('active') : helperContainer.classList.add('active');
+  });
+}
+toggleHelper();
 function ScrollController(scrollContainer,prevButton,nextButton,scrollAmounts){
 const containers = document.getElementById(scrollContainer);
 const leftButton = document.getElementById(prevButton);
