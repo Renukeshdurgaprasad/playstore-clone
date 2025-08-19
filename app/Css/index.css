@@ -170,21 +170,7 @@ nav a.active {
 .Container-scroll::-webkit-scrollbar {
     display:none;
 }
-.Container-poster {
-    flex-shrink: 0; 
-    width: 300px; 
-    height: 350px; 
-    background-color: #ffffff;
-    border: 2px solid #ddd;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #555;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+
 .nav-btn {
     position: absolute;
     top: 50%;
@@ -509,4 +495,80 @@ nav a.active {
 .resource-text {
     font-size: 14px;
     line-height: 1.4;
+}
+
+/*
+ * Main Card Container
+ * Replaces your old .Container-poster styling
+*/
+.Container-poster {
+    /* Main layout: A vertical column */
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* This creates space between the preview and the info section */
+
+    /* Sizing and appearance */
+    width: 340px; /* A more appropriate width */
+    height: auto; /* Height will be determined by the content inside */
+    flex-shrink: 0;
+    
+    /* Remove old styling */
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    
+    /* Keep cursor as a pointer for interaction */
+    cursor: pointer;
+}
+
+/* 
+ * 1. Top Preview Image Container
+ * Replaces your old .poster styling
+*/
+.card-preview {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Ensures a consistent widescreen shape */
+    border-radius: 16px; /* Rounded corners like the example */
+    overflow: hidden; /* Ensures the image inside respects the rounded corners */
+    background-color: #f0f0f0; /* A placeholder color while image loads */
+}
+
+.card-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes the image fill the container without stretching */
+}
+
+/* 
+ * 2. Bottom Info Section
+ * Replaces your old .title-poster styling
+*/
+.card-info {
+    /* Layout: A horizontal row for the icon and text */
+    display: flex;
+    align-items: center; /* Vertically aligns the icon with the text block */
+    gap: 12px; /* Creates space between the icon and the text */
+    padding: 0 4px; /* Small padding to align with the preview above */
+}
+
+.app-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px; /* Slightly rounded corners for the icon */
+    flex-shrink: 0; /* Prevents the icon from shrinking */
+}
+
+
+
+.app-title {
+    font-size: 1rem; /* 16px */
+    font-weight: 500;
+    color: #202124; /* A dark gray for readability */
+    font-family: sans-serif; /* Use a clean font */
+}
+
+.app-meta {
+    font-size: 0.875rem; /* 14px */
+    color: #5f6368; /* A lighter gray for secondary info */
+    font-family: sans-serif;
 }
