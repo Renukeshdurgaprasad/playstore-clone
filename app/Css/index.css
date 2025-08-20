@@ -222,12 +222,12 @@ nav a.active {
 
 .Big-poster {
     
-    height: 250px;
+    height: 299px;
     width: 94%;
     max-width: 1285px;
-    background-color: #ffffff;
-    border: 2px solid #ddd;
+    border: 2px solid #f0f0f0;
     border-radius: 20px;
+    background-image: url("https://play-lh.googleusercontent.com/m2ruR-bSEiZdyHEHID30n3buCq3gplL0pOswOurjV_f0LOMt9lUGPsJqUateQIRrAQ=w526-h296-rw");
     align-items: center;
     font-size: 2rem;
     font-weight: bold;
@@ -489,7 +489,7 @@ nav a.active {
 
     /* Sizing and appearance */
     width: 340px; /* A more appropriate width */
-    height: auto; /* Height will be determined by the content inside */
+    height: 270px; /* Height will be determined by the content inside */
     flex-shrink: 0;
     
     /* Remove old styling */
@@ -694,4 +694,23 @@ nav a.active {
     display: flex;
    flex-direction: row;
     gap: 16px; 
+}
+
+.btn-install {
+    background-color: rgb(98, 95, 95);
+    color: white;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left: 50px;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    width:90px;
+    margin-bottom:0px;
+}
+
+.btn-install:hover {
+    background-color:black;
 }
