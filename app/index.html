@@ -11,7 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
+  <script src="https://www.youtube.com/iframe_api" defer></script>
+  </head>
 
 <body>
    <header class="main-header">
@@ -135,7 +136,59 @@
   </h5>
   <div class="Container-video">
     <div class="Container-scroll" id="scrollContainerVideo">
-      <div class="Container-vposter"></div>
+
+
+
+
+
+  <!-- Add this script tag to your <head> or right before the closing </body> tag -->
+
+
+<!-- ======================================================= -->
+<!-- THE VISIBLE VIDEO CARD ON THE PAGE                      -->
+<!-- ======================================================= -->
+<div class="Container-vposter" data-youtube-id="vuAhNH2UL1Y">
+  
+  <!-- The poster image and play button -->
+  <div class="video-thumbnail">
+    <img src="https://play-lh.googleusercontent.com/7cbF0CaotSfUmbK7UMt9NJdKP445eLN58Tf84P7qkyiS92gwnZg8A58Nkc45ZkAVOQ" class="video-poster" alt="Video Poster">
+    <div class="play-button"></div>
+  </div>
+
+  <!-- Game information area -->
+  <div class="game-info">
+    <img class="game-icon" src="https://play-lh.googleusercontent.com/vJkYN1DjWBfyvycAH4AipXaiqJ9i6Ug01zU-qhyFNLrhsMTElDzLNTJ_KBd4g9IKYYc" alt="Wuthering Waves Icon">
+    <div class="game-details">
+      <div class="game-title">Brawl Stars</div>
+      <div class="game-genre">Action • Role playing</div>
+      <div class="game-rating">rating&#9733;</div>
+    </div>
+  </div>
+
+</div>
+<!-- You can add more cards here with different data-youtube-id values -->
+<!-- 
+<div class="Container-vposter" data-youtube-id="ANOTHER_ID_HERE">
+  ...
+</div> 
+-->
+
+
+<!-- ======================================================= -->
+<!-- THE HIDDEN VIDEO MODAL (Place this before closing </body>) -->
+<!-- ======================================================= -->
+<div id="video-modal-overlay">
+  <div id="modal-content">
+    <!-- The YouTube iframe will be controlled by JavaScript -->
+    <div id="youtube-player-container"></div>
+  </div>
+</div>
+
+
+
+
+
+
       <div class="Container-vposter"></div>
       <div class="Container-vposter"></div>
       <div class="Container-vposter"></div>
