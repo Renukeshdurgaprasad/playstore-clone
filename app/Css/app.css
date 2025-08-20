@@ -237,22 +237,7 @@ nav a.active {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin-left:116px;
 }
-.Container-vposter1, .Container-vposter-app {
-    flex-shrink: 0; 
-    width: 150px; 
-    height: 150px; 
-    background-color: #ffffff;
-    border: 2px solid #ddd;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #555;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border:1px solid black;
-}
+
 .Container-poster-app {
     flex-shrink: 0; 
     width: 300px; 
@@ -510,4 +495,185 @@ nav a.active {
 .resource-text {
     font-size: 14px;
     line-height: 1.4;
+}
+.image-app-container ,.app-image1{
+    display: flex;
+    gap: 16px; 
+ align-items: center;
+ flex-direction: row;
+}
+
+.container-app-poster {
+    width: 300px;
+    background-color: #202124;
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.poster-image {
+    height: 170px;
+    background-image: url('https://i.imgur.com/oK4Q3tS.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.poster-text h2 {
+    font-size: 1.4em;
+    margin: 0;
+    font-weight: 500;
+}
+
+.poster-text p {
+    font-size: 0.9em;
+    margin: 5px 0 0;
+    font-weight: 300;
+}
+
+.app-info {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.app-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.app-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.app-name {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.app-developer {
+    font-size: 0.8em;
+    color: #bdc1c6;
+}
+
+.install-button {
+    background-color: #8ab4f8;
+    color: #202124;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.in-app-purchases {
+    font-size: 0.7em;
+    color: #bdc1c6;
+    padding: 0 20px 15px 85px; /* Aligns with app details */
+}
+
+.Container-vposter-app {
+    display: flex;
+    flex-direction: column;
+    width: 100px; /* Adjust width as needed */
+    margin: 10px;
+    font-family: 'Roboto', sans-serif; /* Using a common font */
+}
+
+.Container-vposter-app img {
+    width: 100px;
+    height: 100px;
+    border-radius: 22px; /* Creates the "squircle" shape */
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.Container-vposter-app .app-title {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.3;
+    height: 36px; /* Ensures space for two lines of text */
+    overflow: hidden;
+}
+
+.Container-vposter-app .app-rating {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #5f6368;
+    margin-top: 4px;
+}
+
+.Container-vposter-app .star-icon {
+    font-size: 10px;
+    margin-left: 4px;
+    color: #5f6368;
+}
+
+.Container-app3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px; 
+}
+
+.Container-vposter1 {
+    /* Sizing and Spacing */
+    width: 110px;
+    margin-right: 20px;
+
+    /* Font and Text */
+    font-family: 'Roboto', sans-serif; /* A font similar to the Google Play Store */
+    text-align: left;
+    
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+}
+
+.Container-vposter1 img {
+    width: 110px;
+    height: 110px;
+    border-radius: 24px; /* Creates the rounded square ("squircle") shape */
+    margin-bottom: 12px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.Container-vposter1 .app-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.Container-vposter1 .app-title {
+    font-size: 14px;
+    color: #3c4043;
+    line-height: 1.3;
+    height: 36px; /* Reserves space for up to two lines of text to maintain alignment */
+    overflow: hidden;
+}
+
+.Container-vposter1 .app-rating {
+    font-size: 13px;
+    color: #5f6368;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.Container-vposter1 .star-icon {
+    font-size: 11px;
+    margin-left: 3px;
 }
