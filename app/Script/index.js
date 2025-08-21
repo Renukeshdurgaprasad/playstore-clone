@@ -31,7 +31,7 @@ function ScrollController(scrollContainer, prevButton, nextButton, scrollAmounts
     const containers = document.getElementById(scrollContainer);
     const leftButton = document.getElementById(prevButton);
     const rightButton = document.getElementById(nextButton);
-    if (!containers || !leftButton || !rightButton) return; // Prevent errors if elements don't exist
+    if (!containers || !leftButton || !rightButton) return; 
     let scrollAmount = scrollAmounts;
     leftButton.addEventListener("click", () => {
         containers.scrollBy({ left: -scrollAmount, behavior: "smooth" });
@@ -44,15 +44,10 @@ ScrollController("scrollContainerImage", "prevBtnImage", "nextBtnImage", 316);
 ScrollController("scrollContainerVideo", "prevBtnVideo", "nextBtnVideo", 412);
 ScrollController("scrollContainerVideo1", "prevBtnVideo1", "nextBtnVideo1", 412);
 
-
-// --- DYNAMIC DATA LOADING FUNCTIONS ---
-
-// Helper function to extract YouTube video ID from the full URL
 function getYouTubeId(url) {
     if (!url) return null;
     try {
         const urlObj = new URL(url);
-        // Standard embed URL: https://www.youtube.com/embed/VIDEO_ID
         const pathParts = urlObj.pathname.split('/');
         return pathParts[pathParts.length - 1];
     } catch (e) {
@@ -61,7 +56,6 @@ function getYouTubeId(url) {
     }
 }
 
-// Function to populate the top image-based posters
 function populateImageCards(container, games) {
     const gamesHtml = games.map(game => `
         <div class="Container-poster">
@@ -81,11 +75,10 @@ function populateImageCards(container, games) {
     container.innerHTML = gamesHtml;
 }
 
-// Function to populate the video-based posters
 function populateVideoCards(container, games) {
     const gamesHtml = games.map(game => {
         const videoId = getYouTubeId(game.video);
-        if (!videoId) return ''; // Skip if video ID is not found
+        if (!videoId) return ''; 
 
         return `
         <div class="Container-vposter" data-youtube-id="${videoId}">
@@ -106,11 +99,8 @@ function populateVideoCards(container, games) {
     container.innerHTML = gamesHtml;
 }
 
-// Main function to fetch data and populate all sections
 async function loadAllContent() {
     const url = 'https://raw.githubusercontent.com/Renukeshdurgaprasad/playstore-clone/refs/heads/main/data/GamesData.json';
-    
-    // Get all the containers we need to fill
     const imageContainer = document.getElementById('imageContainer');
     const videoContainer1 = document.getElementById('videoContainer1');
     const videoContainer2 = document.getElementById('videoContainer2');
@@ -119,12 +109,9 @@ async function loadAllContent() {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const gamesData = await response.json();
-
-        // Populate each section with a different slice of data
         if (imageContainer) populateImageCards(imageContainer, gamesData.slice(0, 15));
-        if (videoContainer1) populateVideoCards(videoContainer1, gamesData.slice(9, 24)); // Use a different slice
-        if (videoContainer2) populateVideoCards(videoContainer2, gamesData.slice(17,32 )); // And another one
-        
+        if (videoContainer1) populateVideoCards(videoContainer1, gamesData.slice(9, 24));
+        if (videoContainer2) populateVideoCards(videoContainer2, gamesData.slice(17,32));
     } catch (error) {
         console.error("Failed to fetch and load game data:", error);
         if (imageContainer) imageContainer.innerHTML = '<p>Error loading content.</p>';
@@ -133,8 +120,6 @@ async function loadAllContent() {
     }
 }
 
-
-// --- YOUTUBE PLAYER & EVENT LISTENERS ---
 
 let player;
 window.onYouTubeIframeAPIReady = function() {
@@ -146,16 +131,10 @@ window.onYouTubeIframeAPIReady = function() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Load all dynamic content when the page is ready
     loadAllContent();
-
     const modalOverlay = document.getElementById('video-modal-overlay');
     const modalContent = document.getElementById('modal-content');
-
-    // Event Delegation: Listen for clicks on the whole document
-    // This is more efficient and works for dynamically added elements
     document.body.addEventListener('click', (event) => {
-        // Find the closest parent with the .Container-vposter class
         const videoCard = event.target.closest('.Container-vposter');
         
         if (videoCard) {
@@ -179,6 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     modalContent.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevents modal from closing when clicking inside the video
+        event.stopPropagation(); 
     });
 });

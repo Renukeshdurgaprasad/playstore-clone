@@ -25,6 +25,7 @@ body {
   box-shadow: 0 10px 10px rgba(4, 4, 4, 0.1);
   outline: none;
 }
+
 #headerSearchInput::placeholder {
   color: #5f6368;
   padding-left: 5px; 
@@ -38,7 +39,6 @@ body {
   color: #5f6368;
 
 }
-
 
 .main-header.search-active .header-left nav {
   display: none;
@@ -62,6 +62,7 @@ nav, .header-search-container {
     height: 64px;
     width: 100%;
 }
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -83,6 +84,7 @@ nav, .header-search-container {
     text-decoration: none;
     margin-right: 40px;
 }
+
 .logo img {
     height: 32px;
     margin-right: 8px;
@@ -134,6 +136,7 @@ nav a.active {
     color: #5f6368;
     cursor: pointer;
 }
+
 .profile-icon {
     width: 32px;
     height: 32px;
@@ -147,6 +150,7 @@ nav a.active {
     align-items: center;
     justify-content: center;
 }
+
 .Container-image-app ,.Container-video-app1,
 .Container-video1 {
     position: relative;
@@ -155,6 +159,7 @@ nav a.active {
     padding: 0 40px;
     margin: 50px auto;
 }
+
 .Container-scroll,
 .Container-scroll-app{
     display: flex;
@@ -168,9 +173,11 @@ nav a.active {
 .Container-scroll-app::-webkit-scrollbar {
     display:none;
 }
+
 .nav-btn {
     position: absolute;
-    top: 50%;
+    top: 40%;
+    border:none;
     transform: translateY(-50%); 
     background-color: white;
     margin-right: 60px;
@@ -184,21 +191,25 @@ nav a.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
+
 .nav-btn:hover {
     background-color: #f1f1f1;
+    background: white;
 }
- #prevBtnImage-app1 , #prevBtnVideo-app2 ,#prevBtnVideo1-app{
-    left: 0px;
 
+ #prevBtnImage-app1 , #prevBtnVideo-app2 ,#prevBtnVideo1-app ,#prevBtnVideo2-app,#prevBtnVideo3-app,#prevBtnVideo4-app{
+    left: 0px;
 }
- #prevBtnImage-app1 .material-symbols-outlined, #prevBtnVideo-app2 .material-symbols-outlined, #prevBtnVideo1-app .material-symbols-outlined {
+
+ #prevBtnImage-app1 .material-symbols-outlined, #prevBtnVideo-app2 .material-symbols-outlined, #prevBtnVideo1-app .material-symbols-outlined, #prevBtnVideo2-app .material-symbols-outlined, #prevBtnVideo3-app .material-symbols-outlined, #prevBtnVideo4-app .material-symbols-outlined {
     padding-left: 8px;
 }
- #nextBtnImage-app1 , #nextBtnVideo-app2,#nextBtnVideo1-app {
+
+ #nextBtnImage-app1 , #nextBtnVideo-app2,#nextBtnVideo1-app , #nextBtnVideo2-app , #nextBtnVideo3-app , #nextBtnVideo4-app {
     right: 0px;
 }
+
 .Container-text1{
     padding-left: 80px;
     margin-left:10px;
@@ -207,6 +218,7 @@ nav a.active {
     color: #202124;
     margin-bottom: 0px;
 }
+
 .Container-text2{
     padding-left: 80px;
     margin-left:10px;
@@ -214,6 +226,7 @@ nav a.active {
     color: #70757c;
     margin-top:0px;
 }
+
 .Container-video1, .Container-video-app, .Container-video-app1 {
   position: relative;
 
@@ -223,8 +236,10 @@ nav a.active {
     margin-bottom:5px;
     margin-top:10px;
 }
+
 .Big-poster {
-    height: 250px;
+    background-image: url("https://cdn.dribbble.com/userupload/15634596/file/original-d9e2207902e9112ae253b54c83474104.png?crop=0x0-3201x2401&format=webp&resize=400x300&vertical=center");
+    height: 275px;
     width: 94%;
     max-width: 1285px;
     background-color: #ffffff;
@@ -253,17 +268,20 @@ nav a.active {
     color: #555;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
 .footer{
           background-color: #f8f9fa; 
             color: #5f6368;
             font-size: 14px;
             padding: 40px 5%; 
         }
+
 .footer-line{
     border: none;
     border-top: 3px solid #eee;
     margin-bottom: 1px;
 }
+
 .footer-container2,
 .footer-container3 {
     display: flex;
@@ -281,25 +299,30 @@ nav a.active {
 .footer-container3 a:hover {
     color: #202124;
 }
+
 .footer-list {
     margin-right: 40px;
     margin-left: 5px;
 }
+
 .footer-list h3{
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 10px;
     margin-left:8px;
 }
+
 .footer-list ul {
     list-style: none;
     padding-bottom: 10px;
     padding-left: 0px;
     margin-left: 9px;
 }
+
 .footer-list li {
     margin-bottom: 8px;
 }
+
 .footer-container3{
     display: flex;
     flex-direction: row;
@@ -308,6 +331,7 @@ nav a.active {
     padding-bottom:2px;
     margin-bottom:0px;
 }
+
 .footer-container3 ul {
     list-style: none;
      display: flex;
@@ -316,9 +340,11 @@ nav a.active {
     padding-top:0px;
     margin-left: 9px;
 }
+
 .footer-container3 li {
     padding-right: 19px;
 }
+
 .footer-text {
     text-align: center;
     color: #5f6368;
@@ -329,14 +355,10 @@ nav a.active {
     margin-top:0px;
 
 }   
+
 .footer-content{
     margin-bottom:0px;
 }
-
-
-
-
-
 
 .help-function {
     opacity: 0;
@@ -416,13 +438,16 @@ nav a.active {
 .help-body::-webkit-scrollbar {
     width: 8px;
 }
+
 .help-body::-webkit-scrollbar-track {
     background: transparent;
 }
+
 .help-body::-webkit-scrollbar-thumb {
     background: #dadce0;
     border-radius: 4px;
 }
+
 .help-body::-webkit-scrollbar-thumb:hover {
     background: #b0b3b8;
 }
@@ -517,7 +542,6 @@ nav a.active {
 
 .poster-image {
     height: 170px;
-    background-image: url('https://i.imgur.com/oK4Q3tS.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -527,16 +551,8 @@ nav a.active {
     padding: 20px;
 }
 
-.poster-text h2 {
-    font-size: 1.4em;
-    margin: 0;
-    font-weight: 500;
-}
-
-.poster-text p {
-    font-size: 0.9em;
-    margin: 5px 0 0;
-    font-weight: 300;
+.poster-text {
+    padding: 12px 16px;
 }
 
 .app-info {
@@ -581,43 +597,47 @@ nav a.active {
 .in-app-purchases {
     font-size: 0.7em;
     color: #bdc1c6;
-    padding: 0 20px 15px 85px; /* Aligns with app details */
+    padding: 0 20px 15px 85px; 
 }
 
 .Container-vposter-app {
     display: flex;
     flex-direction: column;
-    width: 100px; /* Adjust width as needed */
+    width: 170px; 
     margin: 10px;
-    font-family: 'Roboto', sans-serif; /* Using a common font */
+    font-family: 'Roboto', sans-serif; 
 }
 
 .Container-vposter-app img {
-    width: 100px;
-    height: 100px;
-    border-radius: 22px; /* Creates the "squircle" shape */
-    margin-bottom: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+    width: 170px;
+    height: 170px;
+    border-radius: 22px; 
+    margin-bottom: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
 
 .Container-vposter-app .app-title {
-    font-size: 14px;
+    font-size: 18px;
     color: #333;
     line-height: 1.3;
-    height: 36px; /* Ensures space for two lines of text */
+    height: 20px; 
     overflow: hidden;
+    margin-top:  4px;
+    padding-bottom:1px;
+    margin-left:6px;
 }
 
 .Container-vposter-app .app-rating {
+     margin-left:6px;
     display: flex;
     align-items: center;
-    font-size: 13px;
+    font-size: 18px;
     color: #5f6368;
-    margin-top: 4px;
+    margin-top: 0px;
 }
 
 .Container-vposter-app .star-icon {
-    font-size: 10px;
+    font-size: 16px;
     margin-left: 4px;
     color: #5f6368;
 }
@@ -631,15 +651,10 @@ nav a.active {
 }
 
 .Container-vposter1 {
-    /* Sizing and Spacing */
     width: 110px;
     margin-right: 20px;
-
-    /* Font and Text */
-    font-family: 'Roboto', sans-serif; /* A font similar to the Google Play Store */
+    font-family: 'Roboto', sans-serif;
     text-align: left;
-    
-    /* Layout */
     display: flex;
     flex-direction: column;
 }
@@ -647,9 +662,9 @@ nav a.active {
 .Container-vposter1 img {
     width: 110px;
     height: 110px;
-    border-radius: 24px; /* Creates the rounded square ("squircle") shape */
+    border-radius: 24px; 
     margin-bottom: 12px;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-fit: cover; 
 }
 
 .Container-vposter1 .app-details {
@@ -661,7 +676,7 @@ nav a.active {
     font-size: 14px;
     color: #3c4043;
     line-height: 1.3;
-    height: 36px; /* Reserves space for up to two lines of text to maintain alignment */
+    height: 36px; 
     overflow: hidden;
 }
 
@@ -676,4 +691,73 @@ nav a.active {
 .Container-vposter1 .star-icon {
     font-size: 11px;
     margin-left: 3px;
+}
+
+.app-card {
+    display: flex;
+    flex-direction: column;
+    width: 280px; 
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden; 
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08); 
+}
+
+.card-banner {
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+.card-banner img {
+     max-height: 395px; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+
+.card-details {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    gap: 12px;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.card-text-info {
+    min-width: 0;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #202124;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-category,
+.card-rating {
+    font-size: 0.875rem;
+    color: #5f6368;
+    margin-top: 2px;
+}
+
+.Container-app6, .Container-app5, .Container-app4, .Container-app3, .Container-app2, .Container-app1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px; 
 }

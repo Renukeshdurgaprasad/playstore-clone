@@ -1,4 +1,3 @@
-/* Basic Reset and Font */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -26,6 +25,7 @@ body {
   box-shadow: 0 10px 10px rgba(4, 4, 4, 0.1);
   outline: none;
 }
+
 #headerSearchInput::placeholder {
   color: #5f6368;
   padding-left: 5px; 
@@ -39,7 +39,6 @@ body {
   color: #5f6368;
 
 }
-
 
 .main-header.search-active .header-left nav {
   display: none;
@@ -63,6 +62,7 @@ nav, .header-search-container {
     height: 64px;
     width: 100%;
 }
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -136,6 +136,7 @@ nav a.active {
     color: #5f6368;
     cursor: pointer;
 }
+
 .profile-icon {
     width: 32px;
     height: 32px;
@@ -187,22 +188,27 @@ nav a.active {
     display: flex;
     align-items: center;
     justify-content: center;
+    border:none;
     
 }
 
 .nav-btn:hover {
     background-color: #f1f1f1;
 }
+
 #prevBtnImage, #prevBtnVideo , #prevBtnVideo1, #prevBtnVideo-app2 {
     left: 0px;
 
 }
+
 #prevBtnImage .material-symbols-outlined, #prevBtnVideo .material-symbols-outlined, #prevBtnVideo1 .material-symbols-outlined, #prevBtnImage-app1 .material-symbols-outlined, #prevBtnVideo-app2 .material-symbols-outlined, #prevBtnVideo1-app .material-symbols-outlined {
     padding-left: 8px;
 }
+
 #nextBtnImage, #nextBtnVideo, #nextBtnVideo1, #nextBtnImage-app1 ,#nextBtnVideo1-app {
     right: 0px;
 }
+
 .Container-text1{
     padding-left: 80px;
     margin-left:10px;
@@ -211,6 +217,7 @@ nav a.active {
     color: #202124;
     margin-bottom: 0px;
 }
+
 .Container-text2{
     padding-left: 80px;
     margin-left:10px;
@@ -235,23 +242,27 @@ nav a.active {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin-left:116px;
 }
+
 .footer{
           background-color: #f8f9fa; 
             color: #5f6368;
             font-size: 14px;
-            padding: 40px 5%; /* Use percentage for responsive padding */
+            padding: 40px 5%; 
         }
+
 .footer-line{
     border: none;
     border-top: 3px solid #eee;
     margin-bottom: 1px;
 }
+
 .footer-container2,
 .footer-container3 {
     display: flex;
     justify-content:flex-start;
     padding: 20px 0;
 }
+
 .footer-container2 a,
 .footer-container3 a {
     color: #5f6368;
@@ -263,25 +274,30 @@ nav a.active {
 .footer-container3 a:hover {
     color: #202124;
 }
+
 .footer-list {
     margin-right: 40px;
     margin-left: 5px;
 }
+
 .footer-list h3{
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 10px;
     margin-left:8px;
 }
+
 .footer-list ul {
     list-style: none;
     padding-bottom: 10px;
     padding-left: 0px;
     margin-left: 9px;
 }
+
 .footer-list li {
     margin-bottom: 8px;
 }
+
 .footer-container3{
     display: flex;
     flex-direction: row;
@@ -290,6 +306,7 @@ nav a.active {
     padding-bottom:2px;
     margin-bottom:0px;
 }
+
 .footer-container3 ul {
     list-style: none;
      display: flex;
@@ -298,9 +315,11 @@ nav a.active {
     padding-top:0px;
     margin-left: 9px;
 }
+
 .footer-container3 li {
     padding-right: 19px;
 }
+
 .footer-text {
     text-align: center;
     color: #5f6368;
@@ -311,13 +330,10 @@ nav a.active {
     margin-top:0px;
 
 }   
+
 .footer-content{
     margin-bottom:0px;
 }
-
-
-
-
 
 .help-function {
     opacity: 0;
@@ -396,13 +412,16 @@ nav a.active {
 .help-body::-webkit-scrollbar {
     width: 8px;
 }
+
 .help-body::-webkit-scrollbar-track {
     background: transparent;
 }
+
 .help-body::-webkit-scrollbar-thumb {
     background: #dadce0;
     border-radius: 4px;
 }
+
 .help-body::-webkit-scrollbar-thumb:hover {
     background: #b0b3b8;
 }
@@ -417,6 +436,7 @@ nav a.active {
     line-height: 1.5;
     position: relative;
 }
+
 .info-box .close-button {
     right: 8px;
     top: 16px;
@@ -427,6 +447,7 @@ nav a.active {
     text-decoration: none;
     font-weight: 500;
 }
+
 .info-box a:hover {
     text-decoration: underline;
 }
@@ -477,90 +498,60 @@ nav a.active {
     line-height: 1.4;
 }
 
-/*
- * Main Card Container
- * Replaces your old .Container-poster styling
-*/
 .Container-poster {
-    /* Main layout: A vertical column */
     display: flex;
     flex-direction: column;
-    gap: 12px; /* This creates space between the preview and the info section */
-
-    /* Sizing and appearance */
-    width: 340px; /* A more appropriate width */
-    height: 270px; /* Height will be determined by the content inside */
+    gap: 12px; 
+    width: 340px; 
+    height: 270px; 
     flex-shrink: 0;
-    
-    /* Remove old styling */
     border: none;
     background-color: #ffffff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius:16px;
-    /* Keep cursor as a pointer for interaction */
+    border-radius: 16px;
     cursor: pointer;
 }
 
-/* 
- * 1. Top Preview Image Container
- * Replaces your old .poster styling
-*/
 .card-preview {
     width: 100%;
-    aspect-ratio: 16 / 9; /* Ensures a consistent widescreen shape */
-    border-radius: 16px; /* Rounded corners like the example */
-    overflow: hidden; /* Ensures the image inside respects the rounded corners */
-    background-color: #f0f0f0; /* A placeholder color while image loads */
+    aspect-ratio: 16 / 9; 
+    border-radius: 16px; 
+    overflow: hidden; 
+    background-color: #f0f0f0;
 }
 
 .card-preview img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Makes the image fill the container without stretching */
+    object-fit: cover; 
 }
 
-/* 
- * 2. Bottom Info Section
- * Replaces your old .title-poster styling
-*/
 .card-info {
-    /* Layout: A horizontal row for the icon and text */
     display: flex;
-    align-items: center; /* Vertically aligns the icon with the text block */
-    gap: 12px; /* Creates space between the icon and the text */
-    padding: 0 4px; /* Small padding to align with the preview above */
+    align-items: center; 
+    gap: 12px;
+    padding: 0 4px;
 }
 
 .app-icon {
     width: 48px;
     height: 48px;
-    border-radius: 8px; /* Slightly rounded corners for the icon */
-    flex-shrink: 0; /* Prevents the icon from shrinking */
+    border-radius: 8px; 
+    flex-shrink: 0; 
 }
-
-
 
 .app-title {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem; 
     font-weight: 500;
-    color: #202124; /* A dark gray for readability */
-    font-family: sans-serif; /* Use a clean font */
-}
-
-.app-meta {
-    font-size: 0.875rem; /* 14px */
-    color: #5f6368; /* A lighter gray for secondary info */
+    color: #202124; 
     font-family: sans-serif;
 }
 
-
-
-
-
-
-
-
-
+.app-meta {
+    font-size: 0.875rem; 
+    color: #5f6368; 
+    font-family: sans-serif;
+}
 
 .Container-video , .Container-video1 {
   position: relative;
@@ -570,9 +561,6 @@ nav a.active {
     margin: 50px auto;
 }
 
-
-/* --- Main container styling (mostly unchanged) --- */
-/* --- Video Card Styling (Mostly the same) --- */
 .Container-vposter,.Container-vposter1 {
     flex-shrink: 0; 
     width: 405px; 
@@ -587,6 +575,7 @@ nav a.active {
     cursor: pointer;
     border: none;
 }
+
 .Container-vposter .video-thumbnail {
     height: 240px;
     position: relative;
@@ -595,12 +584,14 @@ nav a.active {
     justify-content: center;
     
 }
+
 .Container-vposter .video-poster {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius:20px;
 }
+
 .Container-vposter .play-button {
     width: 50px;
     height: 50px;
@@ -612,74 +603,70 @@ nav a.active {
     align-items: center;
     justify-content: center;
 }
+
 .Container-vposter .play-button::after {
     content: ''; display: block; width: 0; height: 0;
     border-style: solid; border-width: 10px 0 10px 18px;
     border-color: transparent transparent transparent white; margin-left: 4px;
 }
-/* (Game Info CSS remains exactly the same) */
+
 .Container-vposter .game-info { 
     flex-grow: 1; 
     display: flex;
      align-items: center; 
      margin-left:4px;
     }
-.Container-vposter .game-icon { 
-    
+
+.Container-vposter .game-icon {   
     width: 64px;
      height: 64px; 
      border-radius: 12px; 
      margin-right: 20px; 
      object-fit: cover; 
     }
+
 .Container-vposter .game-details { 
     display: flex;
      flex-direction: column; 
 }
+
 .Container-vposter .game-title { 
     font-size: 18px;
     font-weight: 500;
     color: #202124;
 }
+
 .Container-vposter .game-genre, .Container-vposter .game-rating {
     font-size: 14px; 
     color: #5f6368; 
     margin-top: 4px;
 }
 
-
-/* --- NEW: Video Modal Styling --- */
-
-/* The full-screen dark background */
 #video-modal-overlay {
-    position: fixed; /* Stays in place even when scrolling */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
-    z-index: 1000; /* On top of everything */
-    display: none; /* Hidden by default */
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    display: none;
     align-items: center;
     justify-content: center;
 }
 
-/* Add an 'active' class with JS to show the modal */
 #video-modal-overlay.active {
     display: flex;
 }
 
-/* The container for the video player itself */
 #modal-content {
     position: relative;
     width: 85%;
-    max-width: 960px; /* Limit the max size on large screens */
-    /* This creates a perfect 16:9 aspect ratio box for the video */
+    max-width: 960px;
     aspect-ratio: 16 / 9; 
     background-color: #000;
 }
 
-/* The container where the YouTube iframe will be injected */
 #youtube-player-container,
 #youtube-player-container iframe {
     position: absolute;
